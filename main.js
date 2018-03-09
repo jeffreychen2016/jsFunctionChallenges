@@ -61,3 +61,19 @@ function mathTest(number)
 }
 
 mathTest(10);
+
+/*------------- Challenge 3 -------------*/
+
+function uniqueSum(arry)
+{
+    var uniqueValues = arry.filter(function(elem,pos,self){
+        return self.indexOf(elem) == pos;
+    });
+
+    var sum = uniqueValues.reduce(function(prev,curr){
+        return prev + curr;
+    });
+    writeToDom(sum,'challenge-3')
+}
+
+uniqueSum([-1, -1, 5, 2, -7]);
