@@ -26,4 +26,38 @@ function findYears(yearOfBirth,yearToCount)
     writeToDom(domString,'challenge-1');
 }
 
-console.log(findYears(10,10));
+findYears(10,10);
+
+/*------------- Challenge 2 -------------*/
+
+function mathTest(number)
+{
+    var isPrime = false;
+    var isEven = false;
+    var isMultipleOf10 = false;
+    var result = [];
+
+    for(var i = 2; i < number; i++)
+    {
+        if(number % i == 0)
+        {   
+            isEven = true
+            if(number % 10 == 0)
+            {
+                isMultipleOf10 = true;
+                break;
+            }
+        }
+        else
+        {
+            isPrime = true;
+            isEven = false;
+            isMultipleOf10 = false;
+        }
+    }
+
+    result.push(isPrime,isEven,isMultipleOf10);
+    writeToDom(result,'challenge-2')
+}
+
+mathTest(10);
