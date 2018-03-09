@@ -60,7 +60,7 @@ function mathTest(number)
     writeToDom(result,'challenge-2')
 }
 
-mathTest(10);
+mathTest(10);//[false,true,true]
 
 /*------------- Challenge 3 -------------*/
 
@@ -76,4 +76,20 @@ function uniqueSum(arry)
     writeToDom(sum,'challenge-3')
 }
 
-uniqueSum([-1, -1, 5, 2, -7]);
+uniqueSum([-1, -1, 5, 2, -7]); //-1
+
+/*------------- Challenge 4 -------------*/
+
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+arry = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]; //["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+
+function removeGeese(arry,geese)
+{
+    var result = arry.filter(function(elem){
+        return geese.indexOf(elem) == -1
+    })
+
+    writeToDom(result,'challenge-4')
+}
+
+removeGeese(arry,geese);
